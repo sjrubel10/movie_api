@@ -50,6 +50,22 @@ function movie_data( $db ) {
 
 }
 
+function edit_movie ( $mysqli, $moviedata ) {
+
+    $id = $moviedata["id"];
+    $title = $moviedata["title"];
+    $description = $moviedata["description"];
+    $actors =  $moviedata["actors"];
+//    $query=" UPDATE `table_name` SET `title` = '$title', `description` = '$description', `actors` = '$actors'  WHERE id = $id";
+    $query=" UPDATE `movie-lists` SET `title` = ?, `description` = ?, `actors` = ?  WHERE id = ?";
+    $statement = $mysqli->prepare($query);
+    $statement->bind_param('sssi',$title,$description,$actors,$id);
+    $statement->execute();
+    $statement->close();
+
+    return 1;
+}
+
 function delete_existing_movie( $mysqli, $movieId ) {
 
     $query=" UPDATE `movie-lists` SET `is_delete` = 1 WHERE `id` = ?";

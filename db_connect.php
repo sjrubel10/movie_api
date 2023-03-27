@@ -11,7 +11,7 @@ class Db_connect
     private $_connection;
     private static $_instance; //The single instance
     private $_host = "localhost";
-    private $_username = "root";
+    private $_username = "wpdbuser";
     private $_password = "";
     private $_database = "movie";
     /*

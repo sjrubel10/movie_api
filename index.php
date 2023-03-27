@@ -7,9 +7,9 @@
  */
 include "init.php";
 
-$conn = new Db_connect;
+//$conn = new Db_connect;
 
-var_dump( $conn );
+//var_dump( $conn );
 echo "Tested"
 ?>
 
