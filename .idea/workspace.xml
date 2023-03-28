@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6e56f45c-6fa8-464e-b5f3-bfec697afaa6" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/V1/edit_data.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/V1/editmovie.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/fossil_beg.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/image3.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/usb stack.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db_connect.php" beforeDir="false" afterPath="$PROJECT_DIR$/db_connect.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/functions.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/init.php" beforeDir="false" afterPath="$PROJECT_DIR$/init.php" afterDir="false" />
@@ -94,9 +96,16 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Applications/MAMP/htdocs/movie_api/images",
+    "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/images" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -109,7 +118,8 @@
       <workItem from="1679822639510" duration="1943000" />
       <workItem from="1679827683938" duration="2074000" />
       <workItem from="1679843354324" duration="5633000" />
-      <workItem from="1679887705185" duration="7745000" />
+      <workItem from="1679887705185" duration="8430000" />
+      <workItem from="1679973653693" duration="11453000" />
     </task>
     <servers />
   </component>

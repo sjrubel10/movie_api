@@ -77,3 +77,31 @@ function delete_existing_movie( $mysqli, $movieId ) {
     return 1;
 
 }
+
+function resize_image( $original_image ) {
+
+    // Load the original image file
+    $src_image = imagecreatefromjpeg( $original_image );
+
+// Get the current width and height of the image
+    $src_width = imagesx($src_image);
+    $src_height = imagesy($src_image);
+
+// Calculate the new height based on the desired width of 500 pixels
+    $new_width = 500;
+    $new_height = round($src_height * ($new_width / $src_width));
+
+// Create a new image with the desired size
+    $dst_image = imagecreatetruecolor($new_width, $new_height);
+
+// Resize the image
+    imagecopyresampled($dst_image, $src_image, 0, 0, 0, 0, $new_width, $new_height, $src_width, $src_height);
+
+// Output the resized image to a file or to the browser
+    imagejpeg($dst_image, $dst_image, 80); // Save the image to a file
+    header('Content-Type: image/jpeg');
+    imagejpeg($dst_image, null, 80); // Output the image to the browser
+
+    return $dst_image;
+
+}
