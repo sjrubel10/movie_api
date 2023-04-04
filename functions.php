@@ -30,7 +30,7 @@ function movie_data( $db ) {
     $moviedata = [];
     $id = $title = $description = $actors = null;
 //    $db = Db_connect::getInstance()->getConnection();
-    $query=" SELECT `id`, `title`, `description`, `actors` FROM `movie-lists` WHERE `is_delete` = 0 ORDER BY `id` DESC ";
+    $query=" SELECT `id`, `title`, `description`, `actors` FROM `movie-lists` WHERE `is_delete` = 0 ORDER BY `id` DESC LIMIT 2";
     $st = $db->prepare($query);
 //    $st->bind_param("i", $video_pointer);
     $st->execute();

@@ -47,7 +47,35 @@ function aaa() {
 
 }
 
-aaa();
+function imageToPng($imageold, $maxSize = 100) {
+
+    // Create a new image
+    $image = imagecreatetruecolor(200, 200);
+    $white = imagecolorallocate($image, 255, 255, 255);
+    imagefill($image, 0, 0, $white);
+
+// Add some text to the image
+    $text_color = imagecolorallocate($image, 0, 0, 0);
+    $text = "Hello, world!";
+    imagettftext($image, 20, 0, 50, 100, $text_color, 'arial.ttf', $text);
+
+// Save the image as a JPEG file
+    $filename = 'new_image.jpg';
+    imagejpeg($image, $filename);
+
+// Move the uploaded file to the "images" directory
+    $target_dir = "images/";
+    $target_file = $target_dir . basename($filename);
+    move_uploaded_file($filename, $target_file);
+
+// Free up memory
+    imagedestroy($image);
+
+}
+
+//aaa();
+$img = "/Applications/MAMP/htdocs/movie_api/images/image3.jpeg";
+imageToPng( $img );
 ?>
 
 

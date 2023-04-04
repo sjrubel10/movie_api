@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6e56f45c-6fa8-464e-b5f3-bfec697afaa6" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/V1/editmovie.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/fossil_beg.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/image3.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/usb stack.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/V1/setmoviedata.php" beforeDir="false" afterPath="$PROJECT_DIR$/V1/setmoviedata.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/functions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/uploads/1679997391.jpeg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/init.php" beforeDir="false" afterPath="$PROJECT_DIR$/init.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,14 +90,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Applications/MAMP/htdocs/movie_api/images",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Applications/MAMP/htdocs/movie_api&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/images" />
@@ -119,7 +116,13 @@
       <workItem from="1679827683938" duration="2074000" />
       <workItem from="1679843354324" duration="5633000" />
       <workItem from="1679887705185" duration="8430000" />
-      <workItem from="1679973653693" duration="11453000" />
+      <workItem from="1679973653693" duration="12047000" />
+      <workItem from="1679998047419" duration="1000" />
+      <workItem from="1680077744405" duration="2270000" />
+      <workItem from="1680153016344" duration="1112000" />
+      <workItem from="1680232432960" duration="1469000" />
+      <workItem from="1680493744059" duration="4097000" />
+      <workItem from="1680578793545" duration="4928000" />
     </task>
     <servers />
   </component>

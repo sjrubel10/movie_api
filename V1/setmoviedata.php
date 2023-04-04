@@ -41,21 +41,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $response = array('status' => 'error', 'message' => 'Data is not loaded successfully submitted of Invalid data');
     }
 
-} else if( $_SERVER['REQUEST_METHOD'] == 'GET' ) {
+}
+else if( $_SERVER['REQUEST_METHOD'] == 'GET' ) {
 
-//    $GET= json_decode(file_get_contents('php://input'), true);
+//    $_GET= json_decode(file_get_contents('php://input'), true);
+
+//    var_dump( $_GET['ids_str']);
     $mysqli = Db_connect::getInstance()->getConnection();
 
+    $loaded_ids_str = $_GET['ids_str'];
+    $loaded_ids = str_replace('"', '', $loaded_ids_str);
     $response = movie_data( $mysqli );
-//    $response = [];
-
-}else if( $_SERVER['REQUEST_METHOD'] == 'GET' ) {
-
-//    $GET= json_decode(file_get_contents('php://input'), true);
-    $mysqli = Db_connect::getInstance()->getConnection();
-
-    $response = movie_data( $mysqli );
-//    $response = [];
 
 } else {
     // return an error message if the request method is not POST
