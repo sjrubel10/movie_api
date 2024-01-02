@@ -7,35 +7,32 @@
  */
 include "../init.php";
 
-
 // check if the request method is POST
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    header('Content-Type: application/json');
     // get the data from the request body
-    $POST = json_decode(file_get_contents('php://input'), true);
+//    $POST = json_decode(file_get_contents('php://input'), true);
+//    var_dump( $_POST );
+//    var_dump( $_FILES );
 
     // validate the data (you can add your own validation logic here)
-    if ( isset($POST['name']) && isset($POST['email']) && isset($POST['password']) ) {
+    if ( isset( $_POST['title']) && isset( $_POST['description']) && isset( $_POST['actors']) ) {
 
-        if ( !empty($POST['name']) && !empty($POST['email']) && !empty($POST['password']) ) {
-//            $conn = new Db_connect;
-            // insert the data into your database
-
+        if ( !empty( $_POST['title']) && !empty($_POST['description']) && !empty( $_POST['actors']) ) {
             $mysqli = Db_connect::getInstance()->getConnection();
 
-            $isertId = upload_users_data( $mysqli, $POST );
+            $isertId = upload_movie_data( $mysqli, $_POST );
+            $isertId = 1;
 
-            if($isertId) {
+            if( $isertId ) {
                 $response = array('status' => 'success', 'message' => 'Data is successfully submitted');
             }else {
                 $response = array('status' => 'error', 'message' => 'Data is not successfully submitted because of Mysql error');
             }
-
-        } else {
-
+        }
+        else {
             $response = array('status' => 'error', 'message' => 'Data is not successfully submitted because of Empty data');
         }
-
     } else {
         // return an error message if the data is not valid
         $response = array('status' => 'error', 'message' => 'Data is not loaded successfully submitted of Invalid data');
@@ -44,14 +41,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 }
 else if( $_SERVER['REQUEST_METHOD'] == 'GET' ) {
 
-//    $_GET= json_decode(file_get_contents('php://input'), true);
-
-//    var_dump( $_GET['ids_str']);
     $mysqli = Db_connect::getInstance()->getConnection();
 
-    $loaded_ids_str = $_GET['ids_str'];
-    $loaded_ids = str_replace('"', '', $loaded_ids_str);
-    $response = movie_data( $mysqli );
+//    var_dump( $_GET );
+    if( isset( $_GET ) && !empty( $_GET ) ){
+        $loaded_ids_str = $_GET['ids_str'];
+        $limit = (int)$_GET['limit'];
+        $loaded_ids = str_replace('"', '', $loaded_ids_str);
+        $response = movie_data( $mysqli, $loaded_ids, $limit );
+    }else{
+        $response = array('status' => 'error', 'message' => ' Invalid request ');
+    }
+
 
 } else {
     // return an error message if the request method is not POST

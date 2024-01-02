@@ -8,14 +8,14 @@
 
 function upload_users_data( $mysqli,$data) {
 
-    $title = $data['name'];
-    $description = $data['email'];
-    $actors = $data['password'];
+    $title = $data['body']['name'];
+    $description = $data['body']['email'];
+    $actors = $data['body']['password'];
 
-    $query = "INSERT INTO `movie-lists` (`title`, `description`, `actors`) VALUES ( ?, ?, ? )";
+    $query = "INSERT INTO `movie-lists` ( `title`, `description`, `actors` ) VALUES ( ?, ?, ? )";
 
     $statement = $mysqli->prepare($query);
-    $statement->bind_param('sss',$title,$description,$actors);
+    $statement->bind_param('sss', $title,$description,$actors);
     $statement->execute();
     $last_actionid = $statement->insert_id;
     $statement->close();
@@ -26,11 +26,18 @@ function upload_users_data( $mysqli,$data) {
 
 }
 
-function movie_data( $db ) {
+function movie_data( $db, $loaded_ids, $limit  ) {
     $moviedata = [];
     $id = $title = $description = $actors = null;
 //    $db = Db_connect::getInstance()->getConnection();
-    $query=" SELECT `id`, `title`, `description`, `actors` FROM `movie-lists` WHERE `is_delete` = 0 ORDER BY `id` DESC LIMIT 2";
+    if( $loaded_ids !== ''){
+        $in_clouse = "AND `id` NOT IN( $loaded_ids )";
+    } else {
+        $in_clouse = "";
+    }
+
+    $query=" SELECT `id`, `title`, `description`, `actors` FROM `movie-lists` WHERE `is_delete` = 0 $in_clouse ORDER BY `id` DESC LIMIT $limit";
+//    echo $query;
     $st = $db->prepare($query);
 //    $st->bind_param("i", $video_pointer);
     $st->execute();
@@ -50,7 +57,7 @@ function movie_data( $db ) {
 
 }
 
-function edit_movie ( $mysqli, $moviedata ) {
+function edit_movie( $mysqli, $moviedata ) {
 
     $id = $moviedata["id"];
     $title = $moviedata["title"];
@@ -60,6 +67,19 @@ function edit_movie ( $mysqli, $moviedata ) {
     $query=" UPDATE `movie-lists` SET `title` = ?, `description` = ?, `actors` = ?  WHERE id = ?";
     $statement = $mysqli->prepare($query);
     $statement->bind_param('sssi',$title,$description,$actors,$id);
+    $statement->execute();
+    $statement->close();
+
+    return 1;
+}
+function upload_movie_data( $mysqli, $moviedata ) {
+
+    $title = $moviedata["title"];
+    $description = $moviedata["description"];
+    $actors =  $moviedata["actors"];
+    $query = "INSERT INTO `movie-lists` ( `title`, `description`, `actors` ) VALUES ( ?, ?, ? )";
+    $statement = $mysqli->prepare($query);
+    $statement->bind_param( 'sss',$title,$description,$actors );
     $statement->execute();
     $statement->close();
 

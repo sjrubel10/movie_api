@@ -12,7 +12,7 @@ include "init.php";
 //var_dump( $conn );
 echo "Tested";
 
-function aaa() {
+/*function aaa() {
 //    var_dump( $_SERVER);
     // Load the original image file
     $img = "/Applications/MAMP/htdocs/movie_api/images/uploads/1679995514.jpeg";
@@ -75,7 +75,7 @@ function imageToPng($imageold, $maxSize = 100) {
 
 //aaa();
 $img = "/Applications/MAMP/htdocs/movie_api/images/image3.jpeg";
-imageToPng( $img );
+imageToPng( $img );*/
 ?>
 
 

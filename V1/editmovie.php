@@ -41,7 +41,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $DOCUMENT_ROOT = $_SERVER['DOCUMENT_ROOT'];
         $target_dir = $DOCUMENT_ROOT."/movie_api/images/uploads/";
         $target_file = $target_dir . basename($_FILES["profileImage"]["name"]);
-//Here we are getting the file extension if you want, you can use this code
+        //Here we are getting the file extension if you want, you can use this code
         $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 
         if(file_exists($target_file)) {

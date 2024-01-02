@@ -3,9 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="6e56f45c-6fa8-464e-b5f3-bfec697afaa6" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/V1/editmovie.php" beforeDir="false" afterPath="$PROJECT_DIR$/V1/editmovie.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/V1/setmoviedata.php" beforeDir="false" afterPath="$PROJECT_DIR$/V1/setmoviedata.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/functions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/uploads/1679997391.jpeg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -18,6 +18,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/V1/setmoviedata.php" root0="SKIP_INSPECTION" root1="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -122,7 +125,21 @@
       <workItem from="1680153016344" duration="1112000" />
       <workItem from="1680232432960" duration="1469000" />
       <workItem from="1680493744059" duration="4097000" />
-      <workItem from="1680578793545" duration="4928000" />
+      <workItem from="1680578793545" duration="5587000" />
+      <workItem from="1680665576116" duration="12413000" />
+      <workItem from="1680751645781" duration="9577000" />
+      <workItem from="1680837288810" duration="2223000" />
+      <workItem from="1681096937020" duration="1593000" />
+      <workItem from="1681103046688" duration="2377000" />
+      <workItem from="1681183345802" duration="2660000" />
+      <workItem from="1681269234622" duration="1016000" />
+      <workItem from="1681356284869" duration="5094000" />
+      <workItem from="1681442651697" duration="1093000" />
+      <workItem from="1681701368642" duration="1872000" />
+      <workItem from="1681788144187" duration="2860000" />
+      <workItem from="1681873658501" duration="3100000" />
+      <workItem from="1681958641918" duration="6000" />
+      <workItem from="1704172969381" duration="2493000" />
     </task>
     <servers />
   </component>
